@@ -1,0 +1,14 @@
+services:
+  php-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      RDS_HOSTNAME: mydatabase-1.cbakywy4qsxj.ap-south-1.rds.amazonaws.com
+      RDS_USERNAME: admin
+      RDS_PASSWORD: admin123
+      RDS_DB_NAME: Myphpdb
+      RDS_PORT: 3306
+    ports:
+      - '8082:80'
+
